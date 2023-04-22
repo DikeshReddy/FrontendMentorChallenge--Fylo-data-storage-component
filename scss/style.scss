@@ -1,0 +1,24 @@
+@forward "reset";
+@forward "data_storage_component.scss";
+
+@use "variable" as v;
+@use "mixin" as *;
+html {
+  font-size: v.$fs;
+}
+
+body {
+  background-color: v.$neutral-3;
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include bp-md {
+    background-image: url("../images/bg-desktop.png");
+    background-size: contain;
+    background-position: bottom;
+  }
+}

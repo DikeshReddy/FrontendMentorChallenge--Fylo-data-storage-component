@@ -1,0 +1,13 @@
+@use "variable" as v;
+
+@mixin bp-md {
+  @media (min-width: map-get(v.$breakpoint,"md")) {
+    @content;
+  }
+}
+
+@mixin bp-lg {
+  @media (min-width: map-get(v.$breakpoint,"lg")) {
+    @content;
+  }
+}
